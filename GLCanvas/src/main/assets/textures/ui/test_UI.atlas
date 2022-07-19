@@ -1,0 +1,223 @@
+
+textures/ui/test_UI.png
+size: 4096, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+Button
+  rotate: false
+  xy: 3249, 1656
+  size: 127, 38
+  orig: 127, 38
+  offset: 0, 0
+  index: -1
+Button Active
+  rotate: false
+  xy: 3249, 1616
+  size: 114, 38
+  orig: 114, 38
+  offset: 0, 0
+  index: -1
+Button Disable
+  rotate: false
+  xy: 1341, 269
+  size: 114, 38
+  orig: 114, 38
+  offset: 0, 0
+  index: -1
+Button Hover
+  rotate: false
+  xy: 3613, 1939
+  size: 114, 38
+  orig: 114, 38
+  offset: 0, 0
+  index: -1
+Button Normal
+  rotate: false
+  xy: 3484, 1899
+  size: 114, 38
+  orig: 114, 38
+  offset: 0, 0
+  index: -1
+ButtonPressed
+  rotate: false
+  xy: 3149, 1892
+  size: 333, 85
+  orig: 333, 85
+  offset: 0, 0
+  index: -1
+ButtonPressed2
+  rotate: false
+  xy: 3484, 1939
+  size: 127, 38
+  orig: 127, 38
+  offset: 0, 0
+  index: -1
+Card
+  rotate: false
+  xy: 2550, 1143
+  size: 397, 378
+  orig: 397, 378
+  offset: 0, 0
+  index: -1
+Checkbox
+  rotate: false
+  xy: 1247, 215
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: 1
+Checkbox
+  rotate: false
+  xy: 2949, 1331
+  size: 92, 92
+  orig: 92, 92
+  offset: 0, 0
+  index: 2
+Checked
+  rotate: false
+  xy: 1614, 1066
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 3
+Checked
+  rotate: false
+  xy: 1541, 622
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 2
+Checked
+  rotate: false
+  xy: 3049, 1471
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 4
+Checked
+  rotate: false
+  xy: 3149, 1546
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 1
+Checkmark
+  rotate: false
+  xy: 2949, 1425
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: 1
+Checkmark
+  rotate: false
+  xy: 3149, 1598
+  size: 98, 96
+  orig: 98, 96
+  offset: 0, 0
+  index: 2
+Container
+  rotate: false
+  xy: 3149, 1979
+  size: 646, 55
+  orig: 646, 55
+  offset: 0, 0
+  index: -1
+CurrencyContainer
+  rotate: false
+  xy: 1247, 309
+  size: 285, 69
+  orig: 285, 69
+  offset: 0, 0
+  index: -1
+ExitBackground
+  rotate: false
+  xy: 2, 149
+  size: 916, 523
+  orig: 916, 523
+  offset: 0, 0
+  index: -1
+LargeItemContainer
+  rotate: false
+  xy: 920, 2
+  size: 325, 670
+  orig: 325, 670
+  offset: 0, 0
+  index: -1
+PlayBtn
+  rotate: false
+  xy: 461, 13
+  size: 457, 134
+  orig: 457, 134
+  offset: 0, 0
+  index: -1
+PlayBtnPressed
+  rotate: false
+  xy: 2, 13
+  size: 457, 134
+  orig: 457, 134
+  offset: 0, 0
+  index: -1
+SettingsBackground
+  rotate: false
+  xy: 2, 1118
+  size: 1676, 916
+  orig: 1676, 916
+  offset: 0, 0
+  index: -1
+SliderEmpty
+  rotate: false
+  xy: 2550, 1115
+  size: 282, 26
+  orig: 282, 26
+  offset: 0, 0
+  index: -1
+SmallContainer
+  rotate: false
+  xy: 2550, 1523
+  size: 597, 511
+  orig: 597, 511
+  offset: 0, 0
+  index: -1
+SmallItemContainer
+  rotate: false
+  xy: 1247, 380
+  size: 292, 292
+  orig: 292, 292
+  offset: 0, 0
+  index: -1
+StoreBackground
+  rotate: false
+  xy: 1680, 1113
+  size: 868, 921
+  orig: 868, 921
+  offset: 0, 0
+  index: -1
+TabSelected
+  rotate: false
+  xy: 3149, 1696
+  size: 304, 96
+  orig: 304, 96
+  offset: 0, 0
+  index: -1
+TabUnselected
+  rotate: false
+  xy: 3149, 1794
+  size: 304, 96
+  orig: 304, 96
+  offset: 0, 0
+  index: -1
+TopContainer
+  rotate: false
+  xy: 2, 674
+  size: 1610, 442
+  orig: 1610, 442
+  offset: 0, 0
+  index: -1
+namebox
+  rotate: false
+  xy: 3797, 1998
+  size: 225, 36
+  orig: 225, 36
+  offset: 0, 0
+  index: -1

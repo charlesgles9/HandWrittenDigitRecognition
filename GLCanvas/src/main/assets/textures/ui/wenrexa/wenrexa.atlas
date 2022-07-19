@@ -1,0 +1,314 @@
+
+textures/ui/wenrexa/wenrexa.png
+size: 4096, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+BarWindow
+  rotate: false
+  xy: 1189, 484
+  size: 188, 525
+  orig: 188, 525
+  offset: 0, 0
+  index: -1
+BtnExitNoOpacity
+  rotate: false
+  xy: 1104, 37
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+BtnExitOpacity
+  rotate: false
+  xy: 1189, 233
+  size: 55, 55
+  orig: 55, 55
+  offset: 0, 0
+  index: -1
+Btn_V01
+  rotate: false
+  xy: 2780, 1641
+  size: 366, 67
+  orig: 366, 67
+  offset: 0, 0
+  index: -1
+Btn_V02
+  rotate: false
+  xy: 3173, 1838
+  size: 366, 67
+  orig: 366, 67
+  offset: 0, 0
+  index: -1
+Btn_V03
+  rotate: false
+  xy: 736, 25
+  size: 366, 67
+  orig: 366, 67
+  offset: 0, 0
+  index: -1
+Btn_V04
+  rotate: false
+  xy: 3173, 1769
+  size: 366, 67
+  orig: 366, 67
+  offset: 0, 0
+  index: -1
+Btn_V05
+  rotate: false
+  xy: 3173, 1907
+  size: 366, 67
+  orig: 366, 67
+  offset: 0, 0
+  index: -1
+Btn_V06
+  rotate: false
+  xy: 3540, 1979
+  size: 366, 67
+  orig: 366, 67
+  offset: 0, 0
+  index: -1
+Btn_V07
+  rotate: false
+  xy: 1719, 1525
+  size: 365, 70
+  orig: 365, 70
+  offset: 0, 0
+  index: -1
+Btn_V08
+  rotate: false
+  xy: 2413, 1638
+  size: 365, 70
+  orig: 365, 70
+  offset: 0, 0
+  index: -1
+Btn_V09
+  rotate: false
+  xy: 369, 22
+  size: 365, 70
+  orig: 365, 70
+  offset: 0, 0
+  index: -1
+Btn_V10
+  rotate: false
+  xy: 3173, 1976
+  size: 365, 70
+  orig: 365, 70
+  offset: 0, 0
+  index: -1
+Btn_V11
+  rotate: false
+  xy: 2, 22
+  size: 365, 70
+  orig: 365, 70
+  offset: 0, 0
+  index: -1
+Btn_V12
+  rotate: false
+  xy: 1379, 939
+  size: 365, 70
+  orig: 365, 70
+  offset: 0, 0
+  index: -1
+Btn_V13
+  rotate: false
+  xy: 3541, 1865
+  size: 241, 55
+  orig: 241, 55
+  offset: 0, 0
+  index: -1
+Btn_V14
+  rotate: false
+  xy: 1719, 1408
+  size: 241, 55
+  orig: 241, 55
+  offset: 0, 0
+  index: -1
+Btn_V15
+  rotate: false
+  xy: 2413, 1581
+  size: 241, 55
+  orig: 241, 55
+  offset: 0, 0
+  index: -1
+Btn_V16
+  rotate: false
+  xy: 3541, 1922
+  size: 241, 55
+  orig: 241, 55
+  offset: 0, 0
+  index: -1
+Btn_V17
+  rotate: false
+  xy: 3541, 1751
+  size: 241, 55
+  orig: 241, 55
+  offset: 0, 0
+  index: -1
+Btn_V18
+  rotate: false
+  xy: 3541, 1808
+  size: 241, 55
+  orig: 241, 55
+  offset: 0, 0
+  index: -1
+Btn_V19
+  rotate: false
+  xy: 1719, 1465
+  size: 259, 58
+  orig: 259, 58
+  offset: 0, 0
+  index: -1
+Btn_V20
+  rotate: false
+  xy: 2086, 1537
+  size: 259, 58
+  orig: 259, 58
+  offset: 0, 0
+  index: -1
+ButtonPanel
+  rotate: false
+  xy: 3173, 1726
+  size: 259, 41
+  orig: 259, 41
+  offset: 0, 0
+  index: -1
+Cell125x121px
+  rotate: false
+  xy: 1572, 816
+  size: 125, 121
+  orig: 125, 121
+  offset: 0, 0
+  index: -1
+CellBig1
+  rotate: false
+  xy: 1379, 745
+  size: 191, 192
+  orig: 191, 192
+  offset: 0, 0
+  index: 2
+CellBig2
+  rotate: false
+  xy: 1379, 551
+  size: 191, 192
+  orig: 191, 192
+  offset: 0, 0
+  index: 1
+CellBig3
+  rotate: false
+  xy: 1189, 290
+  size: 191, 192
+  orig: 191, 192
+  offset: 0, 0
+  index: 3
+Checked1
+  rotate: false
+  xy: 1379, 499
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 3
+Checked2
+  rotate: false
+  xy: 1980, 1473
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 5
+Checked3
+  rotate: false
+  xy: 3784, 1927
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 2
+Checked4
+  rotate: false
+  xy: 2656, 1586
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 4
+Checked4
+  rotate: false
+  xy: 2347, 1545
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 1
+Checked5
+  rotate: false
+  xy: 1572, 764
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: 6
+Panel1_NoOpacity592x975px
+  rotate: false
+  xy: 2, 1071
+  size: 592, 975
+  orig: 592, 975
+  offset: 0, 0
+  index: -1
+Panel1_Opacity592x975px
+  rotate: false
+  xy: 2, 94
+  size: 592, 975
+  orig: 592, 975
+  offset: 0, 0
+  index: -1
+Panel2_NoOpacity591x975px
+  rotate: false
+  xy: 596, 1071
+  size: 591, 975
+  orig: 591, 975
+  offset: 0, 0
+  index: -1
+Panel2_Opacity591x975px
+  rotate: false
+  xy: 596, 94
+  size: 591, 975
+  orig: 591, 975
+  offset: 0, 0
+  index: -1
+PanelCells528x653px
+  rotate: false
+  xy: 1189, 1393
+  size: 528, 653
+  orig: 528, 653
+  offset: 0, 0
+  index: -1
+PanelWindow
+  rotate: false
+  xy: 1189, 1011
+  size: 568, 380
+  orig: 568, 380
+  offset: 0, 0
+  index: -1
+Window02
+  rotate: false
+  xy: 2413, 1710
+  size: 758, 336
+  orig: 758, 336
+  offset: 0, 0
+  index: -1
+Window03_Btn
+  rotate: false
+  xy: 3908, 1998
+  size: 150, 48
+  orig: 150, 48
+  offset: 0, 0
+  index: -1
+Window03_Minimize
+  rotate: false
+  xy: 1104, 2
+  size: 32, 33
+  orig: 32, 33
+  offset: 0, 0
+  index: -1
+Window04
+  rotate: false
+  xy: 1719, 1597
+  size: 692, 449
+  orig: 692, 449
+  offset: 0, 0
+  index: -1
