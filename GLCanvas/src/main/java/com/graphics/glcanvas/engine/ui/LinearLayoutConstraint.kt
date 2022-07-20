@@ -59,7 +59,7 @@ open class LinearLayoutConstraint(private val parent:GLView?, width:Float, heigh
     }
 
     override fun setVisibility(visible: Boolean) {
-        super.setVisibility(visible)
+      //  super.setVisibility(visible)
         for(view in items){
             view.setVisibility(visible)
         }

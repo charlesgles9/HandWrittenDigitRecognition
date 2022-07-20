@@ -15,12 +15,14 @@ class DrawCanvas(private val position: Vector2f,private val pixelSize:Float):Upd
     private var event:MultiTouchEvent?=null
     private var entity=MnistEntity(MnistMatrix(28,28),position,pixelSize)
     private val axis=AxisABB()
+    private var touchEventEnabled=true
     init {
         val touchRect=RectF(0f,0f,16f,16f)
         entity.initGrid(MnistMatrix(28,28))
         event=MultiTouchEvent(object :MultiTouchEvent.OnMultiTouchListener{
             override fun onTouch(vector2f: Vector2f) {
-
+               if(!touchEventEnabled)
+                   return
                for(i in 0 until entity.getQuads().size){
                    val rect=entity.getQuads()[i]
                    touchRect.set(vector2f.x,vector2f.y)
@@ -62,6 +64,10 @@ class DrawCanvas(private val position: Vector2f,private val pixelSize:Float):Upd
 
     fun getEvent():MultiTouchEvent?{
         return event
+    }
+
+    fun enableTouchEvents(enable:Boolean){
+        this.touchEventEnabled=enable
     }
 
 

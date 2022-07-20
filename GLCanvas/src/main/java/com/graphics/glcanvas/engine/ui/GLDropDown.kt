@@ -18,7 +18,7 @@ class GLDropDown (width:Float, height:Float,
     private var showDropDown=false
     init {
         setText(string,font,size)
-        setRippleColor(ColorRGBA.transparent)
+        setRippleColor(ColorRGBA.white)
     }
     constructor(width: Float, height: Float, atlas: TextureAtlas, name: String, index:Int, font:Font, string: String, size: Float)
             :this(width, height,font,string,size) {
@@ -31,7 +31,7 @@ class GLDropDown (width:Float, height:Float,
         setPrimaryImage(name,index)
         setBackgroundSubTexture(name,index)
         setText(string,font,size)
-        setRippleColor(ColorRGBA.transparent)
+        setRippleColor(ColorRGBA.white)
         setDefaultColor(ColorRGBA.white)
     }
 

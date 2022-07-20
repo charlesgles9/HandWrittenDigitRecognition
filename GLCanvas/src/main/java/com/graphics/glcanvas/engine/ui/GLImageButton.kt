@@ -36,5 +36,9 @@ class GLImageButton(width:Float, height:Float) : GLView(width, height) {
         text?.setColor(color)
     }
 
+    override fun setVisibility(visible: Boolean) {
+        super.setVisibility(visible)
+    }
+
 
 }

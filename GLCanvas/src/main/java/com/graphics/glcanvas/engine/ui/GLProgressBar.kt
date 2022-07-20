@@ -15,6 +15,7 @@ class GLProgressBar(width:Float,height:Float, progress:Float,horizontalBar:Boole
            setRippleColor(getBackground().getColor(0))
            isProgressBar=true
            setForegroundColor(ColorRGBA.white)
+
        }
 
     constructor(width: Float, height: Float,progress: Float,horizontalBar:Boolean, atlas: TextureAtlas,
@@ -29,6 +30,9 @@ class GLProgressBar(width:Float,height:Float, progress:Float,horizontalBar:Boole
         setForegroundColor(ColorRGBA.white)
     }
 
+    override fun setVisibility(visible: Boolean) {
+        super.setVisibility(visible)
+    }
     override fun roundedCorner(value: Float) {
         this.backgroundThickness=value
         getBackground().setConnerRadius(value)

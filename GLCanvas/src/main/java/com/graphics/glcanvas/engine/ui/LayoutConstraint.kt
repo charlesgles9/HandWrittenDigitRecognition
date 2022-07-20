@@ -97,10 +97,8 @@ open class LayoutConstraint(private val view:GLView) : Constraints() {
     }
 
     private fun applyCenter(){
-        val width=(center?.width?:0f)
-        val height=(center?.height?:0f)
-        val lx= (center?.getX()?.minus(width)?:view.getX())
-        val ly= (center?.getY()?.minus(height)?:view.getY())
+        val lx= (center?.getX()?:view.getX())
+        val ly= (center?.getY()?:view.getY())
         view.set(lx,ly)
     }
 
@@ -168,8 +166,8 @@ open class LayoutConstraint(private val view:GLView) : Constraints() {
             //x axis clip test
             val lowerVisibleX=parent.getX()+parent.width*0.5f>view.getX()-mWidth
             val upperVisibleX=parent.getX()-parent.width*0.5f<view.getX()+mWidth
-
-            view.setVisibility(lowerVisibleY && upperVisibleY&&upperVisibleX&&lowerVisibleX)
+            val visible=lowerVisibleY && upperVisibleY&&upperVisibleX&&lowerVisibleX
+          //  view.setVisibility(visible&&view.isVisible())
             view.clipViewLower(parent.getX() + (parent.width * 0.5f), parent.getY() + (parent.height * 0.5f))
             view.clipViewUpper(parent.getX() - parent.width * 0.5f, parent.getY() - parent.height * 0.5f)
 
@@ -191,8 +189,8 @@ open class LayoutConstraint(private val view:GLView) : Constraints() {
             //x axis clip test
             val lowerVisibleX=parent.getX()+parent.width*0.5f>view.getX()-mWidth
             val upperVisibleX=parent.getX()-parent.width*0.5f<view.getX()+mWidth
-
-            view.setVisibility(lowerVisibleY && upperVisibleY&&upperVisibleX&&lowerVisibleX)
+            val visible=lowerVisibleY && upperVisibleY&&upperVisibleX&&lowerVisibleX
+          //  view.setVisibility(visible&&view.isVisible())
             view.clipViewLower(parent.getX() + (parent.width * 0.5f), parent.getY() + (parent.height * 0.5f)-view.getConstraints().getMarginBottom())
             view.clipViewUpper(parent.getX() - parent.width * 0.5f, parent.getY() - parent.height * 0.5f+view.getConstraints().getMarginTop())
 

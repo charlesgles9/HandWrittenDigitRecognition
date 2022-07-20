@@ -22,6 +22,7 @@ import com.neural.graphics.mnistReader.MnistDataReader
 import com.neural.graphics.mnistReader.MnistMatrix
 import kotlin.concurrent.thread
 import kotlin.math.max
+import kotlin.system.exitProcess
 
 class GLCanvasRenderer(private val context:Context,private val width:Float,private val height:Float):GLRendererView(width,height){
     private var batch=Batch()
@@ -51,11 +52,13 @@ class GLCanvasRenderer(private val context:Context,private val width:Float,priva
     //loading UI
     private val loadingLinearLayout=LinearLayoutConstraint(null,width*0.9f,200f)
     private val loadingBar=GLProgressBar(width*0.6f,40f,0f,true)
-
+    //exit dialog
+    private val exitLayout=RelativeLayoutConstraint(bgLayout,width*0.8f,200f)
     private var testIndex=0
     private var trainDataReader=MnistDataReader()
     private var testDataReader=MnistDataReader()
     private val path = "/NeuralGraphics/data.json"
+
     override fun prepare() {
         batch.initShader(context)
         camera.setOrtho(width, height)
@@ -102,6 +105,7 @@ class GLCanvasRenderer(private val context:Context,private val width:Float,priva
         val learningRateLabel=GLLabel(150f,50f,font,"Learning Rate",0.2f)
         val learningRateDropDown=GLDropDown(130f,50f,font,"0.01",0.18f)
             learningRateDropDown.setBackgroundColor(ColorRGBA(0.2f,0.4f,0.4f,0.4f))
+            learningRateDropDown.setRippleColor(ColorRGBA(0.2f,0.4f,0.4f,0.4f))
             learningRateDropDown.setDropMaxHeight(300f)
             learningRateDropDown.setDropDownRounded(15f)
             learningRateDropDown.setItems(mutableListOf("1.0","0.5","0.1","0.05","0.01","0.005","0.001","0.0005","0.0001"))
@@ -195,9 +199,54 @@ class GLCanvasRenderer(private val context:Context,private val width:Float,priva
         loadingLinearLayout.addItem(loadingTitle)
         loadingLinearLayout.addItem(loadingBar)
         loadingLinearLayout.roundedCorner(10f)
+        //exit dialog
+        val exitButton=GLImageButton(100f,40f)
+        val stayButton=GLImageButton(100f,40f)
+        val exitTitle=GLLabel(250f,50f,font,"Exit Program?",0.35f)
+        exitButton.roundedCorner(10f)
+        stayButton.roundedCorner(10f)
+        exitButton.getConstraints().alignCenterVertical(exitLayout)
+        stayButton.getConstraints().alignCenterVertical(exitLayout)
+        stayButton.getConstraints().alignEnd(exitLayout)
+        exitTitle.getConstraints().alignCenterHorizontal(exitLayout)
+        stayButton.setText("Stay",font,0.15f)
+        exitButton.setText("Exit",font,0.15f)
+        stayButton.getConstraints().layoutMarginRight(10f)
+        exitButton.getConstraints().layoutMarginLeft(10f)
+        exitButton.setBackgroundColor(ColorRGBA(0.2f,0.5f,0.4f,1f))
+        stayButton.setBackgroundColor(ColorRGBA(0.2f,0.5f,0.4f,1f))
+        exitButton.setRippleColor(ColorRGBA(0.2f,0.8f,0.4f,1f))
+        stayButton.setRippleColor(ColorRGBA(0.2f,0.8f,0.4f,1f))
+
+        exitLayout.getConstraints().alignCenter(bgLayout)
+        exitLayout.setEnableTouchEvents(false)
+        exitLayout.roundedCorner(20f)
+        exitLayout.setBackgroundColor(ColorRGBA(0.5f,0.2f,0.2f,1f))
+        exitLayout.addItem(exitButton)
+        exitLayout.addItem(stayButton)
+        exitLayout.addItem(exitTitle)
+        exitLayout.setZ(bgLayout.getZ()+1f)
+        exitLayout.setVisibility(false)
+        stayButton.setOnClickListener(object :OnClickEvent.OnClickListener{
+            override fun onClick() {
+                exitLayout.setEnableTouchEvents(false)
+                bgLayout.setEnableTouchEvents(true)
+                exitLayout.setVisibility(false)
+                canvas.enableTouchEvents(true)
+            }
+        })
+
+        exitButton.setOnClickListener(object :OnClickEvent.OnClickListener{
+            override fun onClick() {
+                exitProcess(0)
+            }
+        })
+
+         getController()?.addEvent(stayButton)
+         getController()?.addEvent(exitButton)
+
 
         if(!FileUtility.checkStoragePermissionDenied(context as Activity)) {
-
             if (meta.saveDataExists(path, context)) {
                 meta.loadSaveData(context, path)
             }else{
@@ -267,6 +316,7 @@ class GLCanvasRenderer(private val context:Context,private val width:Float,priva
                 batch.setMode(BatchQueue.UNORDER)
                 batch.begin(camera)
                 bgLayout.draw(batch)
+                exitLayout.draw(batch)
                 mnistEntity.draw(batch)
                 canvas.draw(batch)
                 answerLabel.draw(batch)
@@ -330,4 +380,11 @@ class GLCanvasRenderer(private val context:Context,private val width:Float,priva
        answerLabel.setText(answer)
     }
 
+
+    fun exit(){
+     exitLayout.setVisibility(true)
+     exitLayout.setEnableTouchEvents(true)
+     bgLayout.setEnableTouchEvents(false)
+     canvas.enableTouchEvents(false)
+    }
 }

@@ -26,6 +26,9 @@ open class GLLabel(width:Float, height:Float, private var font: Font, private va
     }
 
 
+    override fun setVisibility(visible: Boolean) {
+        super.setVisibility(visible)
+    }
 
     fun setText(string:String, font:Font, size:Float){
         text= Text(string,size,font)
